@@ -1,4 +1,4 @@
-import{r as ha,j as sl}from"./index-CQjYrpl5.js";/**
+import{r as ha,j as sl}from"./index-Bo6coPjO.js";/**
  * @license
  * Copyright 2010-2026 Three.js Authors
  * SPDX-License-Identifier: MIT

@@ -1,4 +1,4 @@
-import{r as u,j as F}from"./index-CQjYrpl5.js";import{R as k,T as A,P as W,M as _}from"./Triangle-GlFcswsc.js";const N=`
+import{r as u,j as F}from"./index-Bo6coPjO.js";import{R as k,T as A,P as W,M as _}from"./Triangle-GlFcswsc.js";const N=`
 attribute vec2 position;
 varying vec2 vUv;
 void main() {

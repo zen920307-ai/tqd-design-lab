@@ -5,5 +5,5 @@ import react from "@vitejs/plugin-react";
 // 不依赖本地服务器。配合桌面快捷方式使用。
 export default defineConfig({
   plugins: [react()],
-  base: "./",
+  base: "/tqd-design-lab/",
 });
