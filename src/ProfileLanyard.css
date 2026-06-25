@@ -1,0 +1,514 @@
+.profile-lanyard {
+  position: relative;
+  justify-self: end;
+}
+
+.profile-trigger-shell.border-glow-card {
+  z-index: 5;
+  overflow: visible;
+  background:
+    linear-gradient(135deg, rgba(244, 246, 248, 0.13), rgba(126, 138, 148, 0.035)),
+    rgba(12, 13, 15, 0.64);
+  border-color: rgba(228, 234, 238, 0.18);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 14px 34px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-trigger-shell .border-glow-inner {
+  overflow: visible;
+  border-radius: inherit;
+}
+
+.profile-trigger-shell.border-glow-card::after {
+  mix-blend-mode: screen;
+}
+
+.profile-trigger-shell.border-glow-card:hover,
+.profile-lanyard.open .profile-trigger-shell.border-glow-card {
+  background:
+    linear-gradient(135deg, rgba(244, 246, 248, 0.17), rgba(93, 105, 116, 0.08)),
+    rgba(13, 14, 16, 0.78);
+  border-color: rgba(235, 241, 244, 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 18px 42px rgba(0, 0, 0, 0.28),
+    0 0 24px rgba(129, 159, 176, 0.12);
+  transform: translateY(-1px);
+}
+
+.profile-trigger {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  min-width: 184px;
+  padding: 10px 18px;
+  color: rgba(244, 246, 248, 0.9);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  box-shadow: none;
+  line-height: 1;
+  text-align: center;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.profile-trigger span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.profile-trigger em {
+  color: rgba(244, 246, 248, 0.5);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.12em;
+}
+
+.profile-trigger:hover,
+.profile-lanyard.open .profile-trigger {
+  color: #f4f8fb;
+  transform: translateY(-1px) scale(1.015);
+}
+
+.profile-lanyard.open .profile-trigger em,
+.profile-trigger:hover em {
+  color: rgba(244, 246, 248, 0.62);
+}
+
+.profile-drop {
+  position: absolute;
+  top: calc(100% - 34px);
+  right: -73px;
+  z-index: 1;
+  width: 330px;
+  height: 680px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.profile-lanyard.open .profile-drop {
+  pointer-events: auto;
+}
+
+.lanyard-rope {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 330px;
+  height: 318px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.lanyard-rope-back {
+  z-index: 1;
+}
+
+.lanyard-rope-front {
+  z-index: 3;
+}
+
+.lanyard-rope path {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.lanyard-rope-shadow {
+  stroke: rgba(6, 9, 14, 0.78);
+  stroke-width: 20;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.34));
+}
+
+.lanyard-rope-face {
+  stroke: rgba(226, 235, 240, 0.92);
+  stroke-dasharray: none;
+  stroke-width: 13;
+  filter: drop-shadow(0 0 12px rgba(120, 178, 226, 0.28));
+}
+
+.lanyard-card {
+  position: absolute;
+  top: 252px;
+  left: 21px;
+  width: 288px;
+  overflow: visible;
+  color: #f4f6f8;
+  cursor: grab;
+  background: transparent;
+  transform-origin: 50% -152px;
+  touch-action: none;
+  user-select: none;
+  will-change: transform, opacity;
+  perspective: 1100px;
+  z-index: 2;
+  --reveal-x: 50%;
+  --reveal-y: 42%;
+  --reveal-opacity: 0;
+}
+
+.lanyard-card:active {
+  cursor: grabbing;
+}
+
+.lanyard-card-inner {
+  position: relative;
+  min-height: 452px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.lanyard-face {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.025)),
+    rgba(5, 8, 14, 0.9);
+  border: 2px solid rgba(244, 246, 248, 0.34);
+  border-radius: 30px;
+  box-shadow:
+    0 28px 84px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backface-visibility: hidden;
+  backdrop-filter: blur(24px) saturate(135%);
+}
+
+.profile-lanyard.open .lanyard-face {
+  box-shadow:
+    0 34px 110px rgba(0, 0, 0, 0.58),
+    0 10px 34px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.lanyard-face::before,
+.lanyard-face::after {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  content: "";
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.lanyard-face::before {
+  padding: 2px;
+  background:
+    radial-gradient(circle at var(--reveal-x) var(--reveal-y), rgba(196, 232, 248, 0.42), transparent 11%),
+    radial-gradient(circle at 82% 14%, rgba(111, 130, 173, 1), transparent 24%),
+    radial-gradient(circle at 16% 86%, rgba(244, 246, 248, 0.76), transparent 26%),
+    radial-gradient(circle at 38% 18%, rgba(85, 214, 247, 0.82), transparent 18%);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.lanyard-face::after {
+  background: radial-gradient(circle at var(--reveal-x) var(--reveal-y), rgba(132, 205, 244, 0.032), transparent 42%);
+  mix-blend-mode: screen;
+}
+
+.lanyard-card:hover .lanyard-face::before,
+.lanyard-card:hover .lanyard-face::after {
+  opacity: 1;
+}
+
+.lanyard-front {
+  position: relative;
+}
+
+.lanyard-back {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  gap: 12px;
+  place-items: center;
+  align-content: center;
+  padding: 30px 26px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.lanyard-back img {
+  width: min(192px, 70%);
+  margin-bottom: 20px;
+  aspect-ratio: 1;
+  padding: 12px;
+  object-fit: contain;
+  background: rgba(246, 248, 250, 0.96);
+  border-radius: 24px;
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.42), 0 0 42px rgba(92, 186, 238, 0.22);
+}
+
+.lanyard-back strong {
+  margin-top: 4px;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+}
+
+.lanyard-back span {
+  color: rgba(244, 246, 248, 0.56);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.lanyard-back a {
+  color: rgba(244, 246, 248, 0.78);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.lanyard-contact-lines {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  margin: 0 0 4px;
+  text-align: center;
+}
+
+.lanyard-back a b {
+  display: block;
+  min-width: 0;
+  margin-bottom: 3px;
+  color: rgba(162, 216, 244, 0.9);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+.lanyard-hole {
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  z-index: 5;
+  width: 24px;
+  height: 24px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(1, 2, 4, 0.98) 0 34%, rgba(92, 130, 164, 0.74) 39% 49%, rgba(232, 239, 244, 0.92) 53% 64%, rgba(10, 16, 24, 0.94) 70%);
+  border: 1px solid rgba(244, 246, 248, 0.36);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.28),
+    0 0 16px rgba(120, 178, 226, 0.3);
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.lanyard-image-reveal {
+  position: relative;
+  overflow: hidden;
+  background: #05070b;
+}
+
+.lanyard-image-reveal img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.profile-base {
+  filter: contrast(1.06) saturate(0.92);
+}
+
+.profile-reveal {
+  position: absolute;
+  inset: 0;
+  opacity: var(--reveal-opacity);
+  filter: contrast(1.12) saturate(1.1);
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle at var(--reveal-x) var(--reveal-y), #000 0 38px, rgba(0, 0, 0, 0.64) 68px, transparent 112px);
+  mask-image: radial-gradient(circle at var(--reveal-x) var(--reveal-y), #000 0 38px, rgba(0, 0, 0, 0.64) 68px, transparent 112px);
+  transition: opacity 0.22s ease;
+}
+
+.profile-spotlight {
+  position: absolute;
+  inset: 0;
+  opacity: var(--reveal-opacity);
+  pointer-events: none;
+  background: radial-gradient(circle at var(--reveal-x) var(--reveal-y), rgba(154, 214, 248, 0.1), rgba(154, 214, 248, 0.035) 76px, transparent 132px);
+  mix-blend-mode: screen;
+  transition: opacity 0.22s ease;
+}
+
+.lanyard-info {
+  display: grid;
+  gap: 12px;
+  padding: 16px 18px 18px;
+}
+
+.lanyard-card strong {
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+
+.lanyard-info-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  margin-top: -4px;
+}
+
+.lanyard-info span {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+}
+
+.lanyard-info span i {
+  display: inline-block;
+  overflow: hidden;
+  max-width: max-content;
+  white-space: nowrap;
+  animation: lanyard-type 1.15s steps(16) both;
+}
+
+.lanyard-info span i:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.lanyard-info span i,
+.lanyard-contact {
+  color: rgba(244, 246, 248, 0.54);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+
+.lanyard-contact {
+  flex: 0 0 auto;
+  position: relative;
+  min-width: 68px;
+  padding: 11px 14px;
+  overflow: hidden;
+  color: rgba(244, 246, 248, 0.92);
+  cursor: pointer;
+  background:
+    linear-gradient(135deg, rgba(184, 216, 234, 0.24), rgba(83, 124, 180, 0.12)),
+    rgba(5, 8, 14, 0.72);
+  border: 1px solid rgba(184, 216, 234, 0.36);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 0 22px rgba(95, 170, 220, 0.12);
+  transition: color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.lanyard-contact::before {
+  position: absolute;
+  inset: -60% -20%;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transform: translateX(-120%) rotate(18deg);
+  transition: transform 0.46s ease;
+}
+
+.lanyard-contact:hover {
+  color: #f7fbff;
+  border-color: rgba(226, 244, 250, 0.76);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    0 0 32px rgba(95, 190, 236, 0.28);
+  transform: translateY(-1px) scale(1.04);
+}
+
+.lanyard-contact:hover::before {
+  transform: translateX(120%) rotate(18deg);
+}
+
+@keyframes lanyard-type {
+  from { width: 0; opacity: 0.48; }
+  to { width: 100%; opacity: 1; }
+}
+
+@media (max-width: 980px) {
+  .profile-lanyard {
+    justify-self: end;
+  }
+
+  .profile-trigger {
+    min-width: 148px;
+    padding: 10px 16px;
+  }
+
+  .profile-trigger span,
+  .profile-trigger em {
+    font-size: 10px;
+  }
+
+  .profile-drop {
+    top: calc(100% + 8px);
+    right: auto;
+    left: 50%;
+    width: 330px;
+    height: min(680px, calc(100dvh - 86px));
+    margin-left: -165px;
+    margin-right: 0;
+    transform: none;
+  }
+
+  .lanyard-card {
+    left: 40px;
+    width: 250px;
+  }
+
+  .lanyard-card-inner {
+    min-height: 400px;
+  }
+
+  .lanyard-face {
+    border-radius: 26px;
+  }
+
+  .lanyard-info {
+    gap: 10px;
+    padding: 14px 16px 16px;
+  }
+
+  .lanyard-info-row {
+    gap: 10px;
+  }
+
+  .lanyard-contact {
+    min-width: 62px;
+    padding: 10px 12px;
+  }
+
+  .lanyard-back {
+    gap: 10px;
+    padding: 26px 22px;
+  }
+
+  .lanyard-back img {
+    width: min(164px, 66%);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-trigger {
+    min-width: 128px;
+    padding: 8px 12px;
+  }
+
+  .profile-trigger span,
+  .profile-trigger em {
+    font-size: 9px;
+  }
+
+  .profile-drop {
+    margin-left: -158px;
+    margin-right: 0;
+  }
+
+  .lanyard-card {
+    left: 43px;
+    width: 244px;
+  }
+}

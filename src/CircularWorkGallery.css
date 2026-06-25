@@ -1,0 +1,143 @@
+.circular-work-viewport {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  width: calc(100% + 180px);
+  min-height: min(72vh, 730px);
+  margin: -10px -90px 0;
+  padding: 8px 0;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 28px;
+  perspective: 1200px;
+  mask-image:
+    linear-gradient(90deg, transparent, black 9%, black 91%, transparent),
+    linear-gradient(180deg, transparent, black 8%, black 92%, transparent);
+  mask-composite: intersect;
+}
+
+.circular-work-viewport::before,
+.circular-work-viewport::after {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  content: "";
+  pointer-events: none;
+}
+
+.circular-work-viewport::before {
+  background:
+    linear-gradient(90deg, #010204 0%, rgba(1, 2, 4, 0.08) 18%, transparent 42%, transparent 58%, rgba(1, 2, 4, 0.08) 82%, #010204 100%),
+    radial-gradient(ellipse at 50% 50%, transparent 34%, rgba(0, 0, 0, 0.22) 86%);
+}
+
+.circular-work-viewport::after {
+  opacity: 0.17;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 88px 88px;
+}
+
+.circular-work-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: max-content;
+  min-height: var(--work-row-height);
+  padding: 0 58px;
+  flex-wrap: nowrap;
+  transform-style: preserve-3d;
+}
+
+.circular-work-row.row-1,
+.circular-work-row.row-2,
+.circular-work-row.row-3 {
+  --work-row-height: clamp(184px, 22.4vh, 242px);
+}
+
+.circular-work-row.row-2 {
+  margin-left: -4vw;
+}
+
+.circular-work-card {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: max-content;
+  height: var(--work-row-height);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: none !important;
+  transform-style: preserve-3d;
+  opacity: 0.8;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.circular-work-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  content: "";
+  border: 2px solid rgba(174, 190, 202, 0);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.circular-work-card.is-hovered {
+  z-index: 20;
+  overflow: visible;
+  opacity: 1;
+  box-shadow:
+    0 28px 76px rgba(0, 0, 0, 0.64),
+    0 10px 28px rgba(0, 0, 0, 0.48) !important;
+}
+
+.circular-work-card.is-hovered::before {
+  border-color: rgba(178, 194, 205, 0.68);
+  box-shadow:
+    inset 0 0 22px rgba(210, 224, 232, 0.09),
+    0 0 24px rgba(130, 150, 166, 0.22);
+}
+
+.circular-work-card img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+  filter: saturate(0.72) contrast(1.08) brightness(0.78);
+  transition: filter 0.28s ease;
+}
+
+.circular-work-card:hover img {
+  filter: saturate(0.98) contrast(1.12) brightness(1);
+}
+
+.circular-work-card span {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  z-index: 3;
+  padding: 6px 8px;
+  overflow: hidden;
+  color: rgba(244, 246, 248, 0.88);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: rgba(2, 4, 8, 0.44);
+  border: 1px solid rgba(244, 246, 248, 0.2);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+}

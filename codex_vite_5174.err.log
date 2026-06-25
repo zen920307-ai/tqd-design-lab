@@ -1,0 +1,144 @@
+[2m11:46:20[22m [31m[1m[vite][22m[39m Pre-transform error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+[2m11:46:20[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+      at failureErrorWithLog (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:1467:15)
+      at E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:736:50
+      at responseCallbacks.<computed> (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:603:9)
+      at handleIncomingPacket (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:658:12)
+      at Socket.readFromStdout (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2m11:46:20[22m [31m[1m[vite][22m[39m Pre-transform error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+[2m11:46:20[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+      at failureErrorWithLog (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:1467:15)
+      at E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:736:50
+      at responseCallbacks.<computed> (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:603:9)
+      at handleIncomingPacket (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:658:12)
+      at Socket.readFromStdout (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2m11:46:44[22m [31m[1m[vite][22m[39m Pre-transform error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+[2m11:46:44[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+      at failureErrorWithLog (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:1467:15)
+      at E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:736:50
+      at responseCallbacks.<computed> (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:603:9)
+      at handleIncomingPacket (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:658:12)
+      at Socket.readFromStdout (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2m11:46:45[22m [31m[1m[vite][22m[39m Pre-transform error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+[2m11:46:45[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+E:/拯的个人网站/zen/src/main.jsx:197:6: ERROR: The symbol "worksFolderVisualImages" has already been declared[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mE:/拯的个人网站/zen/src/main.jsx[39m:197:6
+[33m  
+  [33mThe symbol "worksFolderVisualImages" has already been declared[33m
+  195|  });
+  196|  
+  197|  const worksFolderVisualImages = Object.entries(worksImageModules)
+     |        ^
+  198|    .sort(([a], [b]) => a.localeCompare(b))
+  199|    .map(([path, src]) => ({
+  [39m
+      at failureErrorWithLog (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:1467:15)
+      at E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:736:50
+      at responseCallbacks.<computed> (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:603:9)
+      at handleIncomingPacket (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:658:12)
+      at Socket.readFromStdout (E:\拯的个人网站\zen\node_modules\esbuild\lib\main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
